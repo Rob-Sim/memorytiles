@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory tiles</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="body-grid">
+        <header>
+            <p class="label"> Time <br>
+                <span class="header__display" id="timeCountDisplay">0m 0s</span></p>
+            <p class="label"> Flip Count <br>
+                <span class="header__display" id="flipCountDisplay">0</span></p>
+        </header>
+    
+        <p class="labelSide"> Difficulty </p>
+
+        <div class="sidebar">
+            <div class="difficulty">
+                <input type="radio" name="difficulty__selector" id="difficulty__selector--normal" onclick="createHTMLgrid(4)" checked>
+                <label for="difficulty__selector--normal" class="difficulty__selector cldifficulty__selector--normal">&sdot;Normal</label><br>
+
+                <input type="radio" name="difficulty__selector" id="difficulty__selector--hard" onclick="createHTMLgrid(6)">
+                <label for="difficulty__selector--hard" class="difficulty__selector cldifficulty__selector--hard">&sdot;Hard</label><br>
+
+                <input type="radio" name="difficulty__selector" id="difficulty__selector--god" onclick="createHTMLgrid(8)">
+                <label for="difficulty__selector--god" class="difficulty__selector cldifficulty__selector--god">&sdot;God</label><br>
+            </div>
+        </div>
+    
+        <div class="grid__container" id="grid__container--id">
+       <!-- <div class='item' id='item"+i+"'>
+                <div class='grid__tile--front tile__side' id='grid__item--front--" + i +"' onClick='clicked(this.id)'></div>
+                <div class='grid__tile--back tile__side' id='grid__item--back--" + i +"'></div> 
+            </div> -->
+        </div>
+        <p class="labelSide">History</p>
+        <div class="history">
+            <div id="history__container">
+                <!-- <p class="history__label">1m20s 35F</p> -->         
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
